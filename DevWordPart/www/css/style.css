@@ -1,0 +1,66 @@
+.btn-style {
+	width: 100%;
+	margin-top: 10px;
+	background-color: rgb(223, 236, 219);
+}
+
+.choice {
+	background-color: rgb(223, 236, 219);
+	padding: 50px;
+	height: 50px;
+	width: 100%;
+	display: block;
+	margin: auto;
+	text-align: center;
+	padding-top: 15px;
+	text-overflow: inherit;
+}
+
+.case {
+	/*vertical-align: center;*/
+}
+
+.correct {
+	color: rgb(0, 255, 0);
+	font-size: xx-large;
+}
+
+.img-box {
+	height: 50%;
+	width: 50%;
+	display: block;
+	margin: auto;
+}
+
+.quiz {
+	height: 100px;
+	width: 100%;
+	background-color: rgb(149, 190, 133);
+	display: block;
+	margin: auto;
+	text-align: center;
+	margin-top: 10px;
+	padding-top: 25px;
+	font-size: xx-large;
+}
+
+.result {
+	text-align: center;
+	padding-top: 40px;
+}
+
+.wrong {
+	color: rgb(255, 0, 0);
+	font-size: xx-large;
+}
+
+p {
+	padding-top: 5px;
+}
+
+#UserPicture, #galleryPicture {
+	height: 50%;
+	width: 50%;
+	display: block;
+	margin: auto;
+}

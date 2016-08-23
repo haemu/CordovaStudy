@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<!--
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html lang="en">
+  <head>
+        <!--
+        Customize this policy to fit your own app's needs. For more guidance, see:
+            https://github.com/apache/cordova-plugin-whitelist/blob/master/README.md#content-security-policy
+        Some notes:
+            * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+            * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+            * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+                * Enable inline JS: add 'unsafe-inline' to default-src
+        -->
+<!--         <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+        <link rel="stylesheet" type="text/css" href="css/index.css">
+        <title>Hello World</title>
+    </head>
+    <body>
+        <div class="app">
+            <h1>Apache Cordova</h1>
+            <div id="deviceready" class="blink">
+                <p class="event listening">Connecting to Device</p>
+                <p class="event received">Device is Ready</p>
+            </div>
+        </div>
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+    </body>
+</html> -->
+<!-- <!DOCTYPE html> -->
+
+    <meta charset="utf-8">
+    <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
+        <meta http-equiv="Content-Security-Policy X-UA-Compatible" content="default-src 'self' data: gap:cdvfile:https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; IE=edge">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">    
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Sample App</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="container-fluid">
+        <h3>Using Defined Plugins</h3>
+        <!-- take picture -->
+        <div class="row">
+
+            <div class="col-xs-6 col-md-6"> <!--  img-box> -->
+                <img src="" id="UserPicture" class="thumbnail img-circle"> <!--class="img-circle"> -->
+            </div>
+            <div class="col-xs-6 col-md-6 img-box">
+                <img src="" id="galleryPicture" class="thumbnail img-circle">
+            </div>
+        </div>
+
+        <!-- choose picture -->
+        <div class="row">
+            <div class="col-xs-6 col-md-6">
+                <button type="button" class="btn btn-default btn-style" aria-label="Center Align" id="TakePicture">
+                    <p>cordova-plugin-camera</p>
+                    <span class="glyphicon glyphicon-camera" aria-hidden="true"></span>
+                </button>
+            </div>
+            <div class="col-xs-6 col-md-6">
+                <button type="button" class="btn btn-default btn-style" aria-label="Center Align" id="ChoosePicture">
+                    <p>cordova-plugin-camera</p>
+                    <span class="glyphicon glyphicon-picture" aria-hidden="true"></span>
+                </button>
+            </div>
+        </div>
+
+        <!-- play audio -->
+        <div class="row">
+            <!-- play -->
+            <div class="col-xs-6 col-md-6">
+                <button type="button" class="btn btn-default btn-style" aria-label="Center Align" id="OpenMedia">
+                    <p>cordova-plugin-media</p>
+                    <span class="glyphicon glyphicon-music" aria-hidden="true"></span>
+                    <span class="glyphicon glyphicon-play" aria-hidden="true"></span>
+                </button>
+            </div>
+            <!-- pause -->
+<!--             <div class="col-md-4">
+                <button type="button" class="btn btn-default btn-style" aria-label="Center Align" id="PauseMedia" data-toggle="tooltip" data-placement="left" title="cordova-plugin-media">
+                    <span class="glyphicon glyphicon-music" aria-hidden="true"></span>
+                    <span class="glyphicon glyphicon glyphicon-pause" aria-hidden="true"></span>
+                </button>
+            </div> -->
+            <!-- stop -->
+            <div class="col-xs-6 col-md-6">
+                <button type="button" class="btn btn-default btn-style" aria-label="Center Align" id="StopMedia">
+                    <p>cordova-plugin-media</p>
+                    <span class="glyphicon glyphicon-music" aria-hidden="true"></span>
+                    <span class="glyphicon glyphicon-stop" aria-hidden="true"></span>
+                </button>
+            </div>
+        </div>
+
+        <!-- play movie -->
+        <div class="row">
+            <div class="col-md-12">
+                <button type="button" class="btn btn-default btn-style" aria-label="Center Align" id="PlayMovie">
+                    <p>com.dawsonloudon.videoplayer</p>
+                    <span class="glyphicon glyphicon-film" aria-hidden="true"></span>
+                </button>
+            </div>
+        </div>
+
+        <!-- file transfer -->
+        <div class="row">
+            <div class="col-xs-6 col-md-6">
+                <button type="button" class="btn btn-default btn-style" aria-label="Center Align" id="UploadFile">
+                    <p>cordova-plugin-file-transfer</p>
+                    <span class="glyphicon glyphicon-cloud-upload" aria-hidden="true"></span>
+                </button>
+            </div>
+            <div class="col-xs-6 col-md-6">
+                <button type="button" class="btn btn-default btn-style" aria-label="Center Align" id="DownloadFile">
+                    <p>cordova-plugin-file-transfer</p>
+                    <span class="glyphicon glyphicon-cloud-download" aria-hidden="true"></span>
+                </button>                
+            </div>
+        </div>
+
+        <!-- register -->
+        <div class="row">
+            <div class="col-md-12">
+                <button type="button" class="btn btn-default btn-style" aria-label="Center Align" id="Register">
+                    <p>Let's test!</p>
+                    <span class="glyphicon glyphicon-tasks" aria-hidden="true"></span>
+                </button>
+            </div>
+        </div>
+
+        <!-- file -->
+        <div class="row">
+            <div class="col-md-12">
+                <button type="button" class="btn btn-default btn-style" aria-label="Center Align" id="FileOpen">
+                    <p>cordova-plugin-file</p>
+                    <span class="glyphicon glyphicon-file" aria-hidden="true"></span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/Picture.js"></script>
+    <script type="text/javascript" src="js/Media.js"></script>
+    <script type="text/javascript" src="js/FileOperation.js"></script>
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+  </body>
+</html>
